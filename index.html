@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Operación Stef.exe. Expediente 2310. Cumpleaños de Stef, 23 de octubre de 2026.">
+  <title>OPERACIÓN STEF.EXE | EXPEDIENTE 2310</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio">
+      <img src="assets/recurso-004.png" alt="" width="32" height="38">
+      OPERACIÓN STEF.EXE
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <a href="#datos">DATOS</a>
+      <a href="#perfil">EXPEDIENTE</a>
+      <a href="#requisitos">REQUISITOS</a>
+      <a class="nav-rsvp" href="#confirmar">CONFIRMAR ↗</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <!-- PORTADA -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-backdrop"></div>
+
+      <div class="hero-copy reveal">
+        <div class="micro light">
+          EXPEDIENTE N.º 2310 / AVELLANEDA / ACCESO RESTRINGIDO
+        </div>
+
+        <span class="stamp">CONFIDENCIAL</span>
+
+        <h1 id="hero-title">
+          <span>OPERACIÓN</span>
+          <strong class="cumple-title">CUMPLE</strong>
+          <em>DE STEF</em>
+        </h1>
+
+        <p class="hero-sub">
+          23 AÑOS. UN ACONTECIMIENTO DE INTERÉS ABSOLUTAMENTE INNECESARIO.
+        </p>
+
+        <a class="btn btn-paper" href="#datos">
+          ABRIR EXPEDIENTE <span aria-hidden="true">↘</span>
+        </a>
+      </div>
+
+      <div class="hero-art reveal">
+        <div class="hero-photo-frame">
+          <img
+            src="assets/recurso-002.png"
+            alt="Stef en la cancha de Independiente con gorro de cumpleaños"
+            fetchpriority="high"
+          >
+        </div>
+
+        <img class="hero-number" src="assets/recurso-007.png" alt="23">
+
+        <span class="hero-note">
+          DE AVELLANEDA<br>PARA EL MUNDO ↗
+        </span>
+      </div>
+
+      <div class="hero-bottom">
+        <span>7 VECES EN LA CIMA</span>
+        <span class="scroll-hint">↓ DESLIZÁ PARA CONTINUAR ↓</span>
+        <span class="web-fake">WEB 100% REAL NO FAKE</span>
+      </div>
+    </section>
+
+    <!-- DATOS DEL OPERATIVO -->
+    <section id="datos" class="section paper-section" aria-labelledby="datos-title">
+      <div class="section-head reveal">
+        <span class="index">01 / INFORMACIÓN CLASIFICADA</span>
+        <h2 id="datos-title">DATOS DEL <i>OPERATIVO</i></h2>
+        <p>El organismo regulador del Rojo comunica lo siguiente.</p>
+      </div>
+
+      <div class="details-layout">
+        <div class="operation-sheet reveal">
+          <span class="sheet-top">DOCUMENTO OFICIAL (FAKKEEE XD) / STEF.EXE</span>
+
+          <dl>
+            <div>
+              <dt>OPERACIÓN</dt>
+              <dd>Cumpleaños de Stef</dd>
+            </div>
+
+            <div>
+              <dt>FECHA</dt>
+              <dd id="event-date">Viernes 23 de octubre de 2026</dd>
+            </div>
+
+            <div>
+              <dt>HORARIO</dt>
+              <dd id="event-time">21:30 HS</dd>
+            </div>
+
+            <div>
+              <dt>UBICACIÓN</dt>
+              <dd id="event-location">Sánchez de Bustamante 2630, CABA</dd>
+            </div>
+          </dl>
+
+          <p class="sheet-foot">
+            * La organización no se responsabiliza por bailes cuestionables.
+          </p>
+        </div>
+
+        <aside class="countdown-panel reveal">
+          <div class="micro light">TIEMPO RESTANTE</div>
+
+          <div class="countdown" id="countdown" role="timer"
+               aria-label="Cuenta regresiva hasta el cumpleaños">
+            <div><strong id="days">--</strong><span>DÍAS</span></div>
+            <div><strong id="hours">--</strong><span>HORAS</span></div>
+            <div><strong id="minutes">--</strong><span>MIN</span></div>
+            <div><strong id="seconds">--</strong><span>SEG</span></div>
+          </div>
+
+          <p id="countdown-note">
+            VIERNES 23 DE OCTUBRE · 21:30 HS · ¡NOS VEMOS AHÍ!
+          </p>
+
+          <a id="calendar-link" class="btn btn-red"
+             href="https://calendar.google.com/calendar/render?action=TEMPLATE"
+             target="_blank" rel="noopener noreferrer">
+            AGREGAR A GOOGLE CALENDAR ↗
+          </a>
+        </aside>
+      </div>
+
+      <div class="map-block reveal">
+        <div>
+          <span class="index">COORDENADAS / CONFIRMADAS</span>
+          <h3>¿DÓNDE ES EL OPERATIVO?</h3>
+
+          <p id="map-caption">
+            Sánchez de Bustamante 2630, CABA.
+          </p>
+
+          <a id="map-link" class="text-link" hidden
+             target="_blank" rel="noopener noreferrer">
+            ABRIR RUTA EN GOOGLE MAPS ↗
+          </a>
+        </div>
+
+        <div id="map-container" class="map-placeholder">
+          <span class="map-pin" aria-hidden="true">⌖</span>
+          <strong>UBICACIÓN DEL OPERATIVO</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERFIL DEL OBJETIVO -->
+    <section id="perfil" class="section dossier-section" aria-labelledby="perfil-title">
+      <div class="section-head reveal">
+        <span class="index">02 / PERFIL DEL OBJETIVO</span>
+        <h2 id="perfil-title">SUJETO: <i>STEF</i></h2>
+      </div>
+
+      <div class="dossier-grid">
+        <div class="portrait-card reveal">
+          <img
+            src="assets/recurso-000.png"
+            alt="Stef sonriendo con una campera roja de Independiente y un libro"
+            loading="lazy"
+          >
+          <span>ARCHIVO FOTOGRÁFICO / SUJETO 2310</span>
+        </div>
+
+        <div class="dossier-text reveal">
+          <div class="micro">ORGANISMO INTERNACIONAL DEL ROJO</div>
+          <h3>EDICIÓN<br>LIMITADA <span>23</span></h3>
+
+          <div class="facts">
+            <p>
+              <span>CLASIFICACIÓN</span>
+              <b>HINCHA DEL ROJO</b>
+            </p>
+            <p>
+              <span>NIVEL DE RIESGO</span>
+              <b>INDETERMINADO</b>
+            </p>
+            <p>
+              <span>ESTADO (MENTAL)</span>
+              <b>FUNCIONAL, EXCEPTO CUANDO JUEGA EL ROJO</b>
+            </p>
+          </div>
+
+          <div class="fake-stats">
+            <p class="stats-heading">
+              ESTADÍSTICAS COMPLETAMENTE INVENTADAS
+            </p>
+
+            <div class="stat-row">
+              <span>FANBOY</span>
+              <div class="stat-track">
+                <div class="stat-fill" style="--stat-width:100%"></div>
+              </div>
+              <b>100%</b>
+            </div>
+
+            <div class="stat-row drip-row">
+              <span>
+                DRIP
+                <small>(ACCORDING TO HIM)</small>
+              </span>
+              <div class="stat-track drip-track">
+                <div class="stat-fill drip-fill"
+                     style="--stat-width:120%"></div>
+              </div>
+              <b class="drip-value">120%</b>
+            </div>
+
+            <div class="stat-row dignity-row">
+              <span>DIGNITY</span>
+              <div class="stat-track dignity-track">
+                <div class="stat-fill dignity-fill" id="dignity-fill"></div>
+              </div>
+              <b class="dignity-value" id="dignity-value">0%</b>
+            </div>
+
+            <div class="stat-row clutch-row">
+              <span>CLUTCH FACTOR</span>
+              <div class="stat-track clutch-track">
+                <div class="stat-fill clutch-fill"></div>
+              </div>
+              <b class="var-review">UNDER VAR REVIEW</b>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img class="dossier-devil"
+           src="assets/recurso-010.png"
+           alt=""
+           loading="lazy">
+    </section>
+
+    <!-- MANUAL DE SUPERVIVENCIA -->
+    <section id="requisitos" class="section requirements-section"
+             aria-labelledby="req-title">
+      <div class="section-head reveal">
+        <span class="index">03 / MANUAL DE SUPERVIVENCIA</span>
+        <h2 id="req-title">REQUISITOS <i>DE LA MISIÓN</i></h2>
+      </div>
+
+      <div class="requirements-layout">
+        <ul class="requirements-list reveal">
+          <li>¡Venir con ganas!!!</li>
+          <li>No hace falta entender de fútbol.</li>
+          <li>
+            La organización se reserva el derecho de juzgar outfits.
+            <span class="requirement-note">
+              (Ponete lo que te haga feliz. NO se admiten outfits
+              que hagan alusión a otro equipo).
+            </span>
+          </li>
+          <li class="special-requirement">
+            EVENTO NO FUTBOLÍSTICO (¡ES UN CUMPLE, EU!!)
+          </li>
+        </ul>
+
+        <div class="requirements-aside reveal">
+          <img src="assets/recurso-004.png"
+               alt="Escudo del Club Atlético Independiente"
+               loading="lazy">
+
+          <p>
+            LA ASISTENCIA ES VOLUNTARIA.<br>
+            <strong>LA CONFIRMACIÓN, NO.</strong>
+          </p>
+
+          <small>pls confirma abajo :p</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONFIRMACIÓN -->
+    <section id="confirmar" class="section rsvp-section"
+             aria-labelledby="rsvp-title">
+
+      <div class="rsvp-intro reveal">
+        <span class="index">04 / TRÁMITE DE CARÁCTER URGENTE</span>
+
+        <h2 id="rsvp-title" class="animated-rsvp-title">
+          ¿VENÍS O<br><i>MIRÁS DESDE<br>AFUERA??</i>
+        </h2>
+
+        <p class="rsvp-warning">
+          CONFIRMAR ASISTENCIA ES MUY IMPORTANTE Y OBLIGATORIO.
+        </p>
+
+        <p>
+          Sin confirmación, la organización no cuenta con vos.
+          Después no digas que no avisamos.
+          Este comunicado fue aprobado por absolutamente nadie.
+        </p>
+      </div>
+
+      <form class="rsvp-form reveal" id="rsvp-form" novalidate>
+        <div class="form-top">
+          FORMULARIO DE DECLARACIÓN JURADA / CASI
+        </div>
+
+        <label for="full-name">
+          NOMBRE Y APELLIDO <span>*</span>
+        </label>
+
+        <input
+          id="full-name"
+          name="nombre"
+          type="text"
+          autocomplete="name"
+          required
+          minlength="2"
+          maxlength="100"
+          placeholder="Ej.: Nicolás Tagliafico"
+        >
+
+        <label for="attendance">
+          ¿VENÍS? <span>*</span>
+        </label>
+
+        <select id="attendance" name="asistencia" required>
+          <option value="">Elegí una opción</option>
+          <option value="si">VOY!!!</option>
+          <option value="no">No voy, arrugué :(</option>
+        </select>
+
+        <label for="comment">
+          COMENTARIO
+          <span class="optional-label">
+            (Si tenés alguna duda o querés decir algo, dejalo acá).
+          </span>
+        </label>
+
+        <textarea
+          id="comment"
+          name="comentario"
+          maxlength="500"
+          rows="4"
+          placeholder="Ej.: ¿Llevo algo? / ¡Me pongo la camiseta, Stef! / Aguante el Rojo."
+        ></textarea>
+
+        <button class="btn btn-red" type="submit" id="submit-rsvp">
+          ⚪ CONFIRMO MI PRESENCIA ⚪
+        </button>
+
+        <p class="form-disclaimer">
+          Tu respuesta será enviada al registro de invitados! :)
+        </p>
+
+        <div id="form-status"
+             class="form-status"
+             role="status"
+             aria-live="polite"></div>
+      </form>
+    </section>
+
+    <!-- VENTANA WINDOWS 98 -->
+    <div class="retro-overlay" id="retro-overlay" hidden>
+      <div
+        class="retro-window"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="retro-title"
+        aria-describedby="retro-description"
+        tabindex="-1"
+      >
+        <div class="retro-titlebar">
+          <span>💻 STEF.EXE — SISTEMA DE SEGURIDAD</span>
+
+          <button
+            class="retro-close"
+            id="retro-close"
+            type="button"
+            aria-label="Cerrar ventana"
+          >×</button>
+        </div>
+
+        <div class="retro-content">
+          <div class="retro-warning" aria-hidden="true">!</div>
+
+          <div>
+            <h3 id="retro-title">CIUDADANO DETECTADO</h3>
+
+            <p id="retro-description">
+              Su declaración ha sido recibida por el
+              Organismo Internacional del Rojo.
+            </p>
+
+            <p class="retro-file">
+              EXPEDIENTE 2310 — AGUANTE EL ROJO.
+            </p>
+          </div>
+        </div>
+
+        <div class="retro-actions">
+          <button class="retro-accept"
+                  id="retro-accept"
+                  type="button">
+            ACEPTAR
+          </button>
+        </div>
+
+        <div class="retro-statusbar">
+          SISTEMA OPERATIVO: STEF.EXE / VERSIÓN 23.10
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTÓN SECRETO — CORREGIDO -->
+    <section id="secreto" class="secret-section">
+
+      <div class="secret-copy">
+        <span class="micro light">05 / MATERIAL RESTRINGIDO</span>
+        <h2>ESTE BOTÓN NO<br>DEBERÍA EXISTIR.</h2>
+      </div>
+
+      <div class="secret-interaction">
+        <img
+          class="secret-devil"
+          src="assets/recurso-008.png"
+          alt=""
+          loading="lazy"
+        >
+
+        <button
+          id="secret-button"
+          class="secret-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="secret-message"
+        >
+          NO TOCAR ↗
+        </button>
+      </div>
+
+      <p id="secret-message" class="secret-message" hidden>
+        ERROR 404: Si ya confirmaste tu asistencia,
+        cerrá esta página y volvé a tus asuntos.
+        <br><br>
+        (Nos vemos el 23/10, don'ttt forgettt!!! XOXO)
+        <br>
+        Cuidate (no te lesiones) :)
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <span class="micro light">
+        FIN DEL EXPEDIENTE / N.º 2310
+      </span>
+
+      <p>HECHO CON 0 PRESUPUESTO Y 700% DE DELIRIO.</p>
+      <strong>AGUANTE EL ROJO, CARAJO.</strong>
+    </div>
+
+    <button id="back-top"
+            class="back-top"
+            type="button">
+      VOLVER ARRIBA ↑
+    </button>
+
+    <span class="footer-mark">
+      STEF.EXE © 2026 · EXPEDIENTE 2310 · SITIO NO OFICIAL
+    </span>
+  </footer>
+</body>
+</html>
