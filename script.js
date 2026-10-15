@@ -5,20 +5,17 @@
    OPERACIÓN STEF.EXE — EXPEDIENTE 2310
    ========================================== */
 
-
 const EVENT = Object.freeze({
   name: "STEF",
   operation: "OPERACIÓN STEF.EXE",
-
-  date: "2026-10-23",
-  time: "21:30",
-  estimatedTime: "21:30",
-
-  location: "Sánchez de Bustamante 2630, CABA, Argentina",
-
+  date: "2026-10-24",
+  time: "15:30",
+  estimatedTime: "15:30",
+  location: "Azcuénaga 1035, CABA, Argentina",
   rsvpEndpoint:
     "https://script.google.com/macros/s/AKfycbwRmpf4ejxgaOz8m39sfIYgjpMxJAT6u8Ayu0i0hMcn26l-xFo9zzKbzDhyQ9Kxx_ZsWQ/exec"
 });
+
 const $ = selector => document.querySelector(selector);
 
 function setText(selector, value) {
@@ -194,7 +191,7 @@ function initializeCountdown() {
   setText(
     "#countdown-note",
     EVENT.time
-      ? "VIERNES 23 DE OCTUBRE · 21:30 HS · ¡NOS VEMOS AHÍ!!."
+      ? "SÁBADO 24 DE OCTUBRE · 15:30 HS · ¡NOS VEMOS AHÍ!"
       : "Horario estimado para el contador. El horario real todavía no está confirmado."
   );
 
@@ -441,11 +438,11 @@ function openRetroConfirmation(attendance) {
 
   title.textContent = "EXPEDIENTE ENVIADO";
 
- 
-description.textContent =
-  attendance === "no"
-    ? "Tu declaración de ausencia fue enviada. El Organismo Internacional del Rojo lamenta profundamente tu arrugue :("
-    : "¡EXPEDIENTE ENVIADO! El Organismo Internacional del Rojo recibió tu solicitud de confirmación. Viernes 23 de octubre, 21:30 HS. Sánchez de Bustamante 2630, CABA. Nos vemos ahí!!";
+  description.textContent =
+    attendance === "no"
+      ? "Tu declaración de ausencia fue enviada. El Organismo Internacional del Rojo lamenta profundamente tu arrugue :("
+      : "¡EXPEDIENTE ENVIADO! El Organismo Internacional del Rojo recibió tu solicitud de confirmación. Sábado 24 de octubre, 15:30 HS. Azcuénaga 1035, CABA. Nos vemos ahí!!";
+
   overlay.hidden = false;
   document.body.style.overflow = "hidden";
 
@@ -645,7 +642,6 @@ function initializeRSVP() {
 
       // Se conservan los datos por si fuera
       // necesario volver a enviar la respuesta.
-
     } catch (error) {
       status.textContent =
         "ERROR: NO SE PUDO ENVIAR EL EXPEDIENTE. INTENTÁ NUEVAMENTE.";
@@ -654,7 +650,6 @@ function initializeRSVP() {
         "Error al enviar la confirmación:",
         error
       );
-
     } finally {
       sending = false;
       button.disabled = false;
