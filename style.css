@@ -1803,3 +1803,316 @@ img[src*="recurso-008"] {
     font-size: 23px;
   }
 }
+
+/* CONFIRMAR: MÁS VISIBLE, SIN PERDER LA ESTÉTICA */
+
+header nav a[href="#confirmar"],
+header nav a[href="#rsvp"] {
+  background: #df101b;
+  color: #fff;
+
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+
+  padding: 15px 23px;
+  border: none;
+  border-radius: 2px;
+
+  box-shadow: 0 3px 12px rgba(223, 16, 27, 0.2);
+  transition: background 0.2s ease,
+              transform 0.2s ease;
+}
+
+header nav a[href="#confirmar"]:hover,
+header nav a[href="#rsvp"]:hover {
+  background: #f01925;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   AJUSTES FINALES — OPERACIÓN STEF
+   ========================================= */
+
+/* 1. DIABLITO MÁS CHICO EN CELULARES */
+@media (max-width: 600px) {
+  .dossier-grid img.dossier-devil[src*="recurso-010"] {
+    width: 68px !important;
+    max-width: 68px !important;
+    height: auto;
+    top: 8px;
+    right: 5px;
+    transform: rotate(12deg);
+  }
+}
+
+@media (max-width: 380px) {
+  .dossier-grid img.dossier-devil[src*="recurso-010"] {
+    width: 55px !important;
+    max-width: 55px !important;
+  }
+}
+
+/* 2. BOTÓN CONFIRMAR DEL MENÚ */
+.site-header nav a.nav-rsvp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px 21px !important;
+  min-height: 48px;
+
+  background: #d71920;
+  color: #fff;
+  border: 0;
+  border-radius: 2px;
+
+  font: 800 12px/1.2 var(--mono);
+  letter-spacing: .02em;
+  text-align: center;
+  white-space: nowrap;
+
+  animation: llamarConfirmacion 5s ease-in-out infinite;
+}
+
+@keyframes llamarConfirmacion {
+  0%, 65%, 100% {
+    background: #d71920;
+    color: #fff;
+    box-shadow: 0 0 0 0 transparent;
+  }
+
+  75%, 85% {
+    background: #fff;
+    color: #c8101c;
+    box-shadow: 0 0 0 2px #f2c94c;
+  }
+}
+
+/* Ajuste del botón en celulares */
+@media (max-width: 600px) {
+  .site-header nav a.nav-rsvp {
+    padding: 12px 14px !important;
+    min-height: 43px;
+    font-size: 11px;
+  }
+}
+
+
+/* CONFIRMAR — ANIMACIÓN MÁS RÁPIDA */
+
+.site-header nav a.nav-rsvp {
+  animation: llamarConfirmacion 2s ease-in-out infinite !important;
+}
+
+@keyframes llamarConfirmacion {
+  0%, 100% {
+    background: #d71920;
+    color: #ffffff;
+    box-shadow: 0 0 0 transparent;
+  }
+
+  45%, 65% {
+    background: #ffffff;
+    color: #d71920;
+    box-shadow: 0 0 0 2px #f2c94c;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header nav a.nav-rsvp {
+    animation: none !important;
+  }
+}
+
+
+/* ======================================
+   SECCIÓN NO TOCAR — ORDEN DEFINITIVO
+   ====================================== */
+
+#secreto.secret-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 65px;
+  row-gap: 20px;
+}
+
+/* Texto de la izquierda */
+#secreto .secret-copy {
+  position: relative;
+  z-index: 2;
+  flex: 0 0 220px;
+}
+
+/* Diablito y botón juntos */
+#secreto .secret-interaction {
+  position: relative;
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Diablito sin superposición */
+#secreto .secret-interaction img.secret-devil {
+  position: static !important;
+  width: 115px !important;
+  max-width: 115px !important;
+  height: auto !important;
+  margin: 0 !important;
+  transform: none !important;
+}
+
+/* Frase debajo de todo */
+#secreto .cringe-note-secret {
+  flex: 0 0 100%;
+  width: 100%;
+  margin: 8px 0 0;
+  text-align: center;
+  color: #f2c94c;
+  font: 700 11px/1.7 var(--mono);
+  letter-spacing: .04em;
+}
+
+
+/* SECCIÓN NO TOCAR — DISTRIBUCIÓN CORREGIDA */
+
+#secreto.secret-section {
+  display: grid;
+  grid-template-columns: minmax(190px, 1fr)
+                         minmax(280px, 1.3fr)
+                         minmax(220px, 1fr);
+  align-items: center;
+  column-gap: 35px;
+  row-gap: 25px;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+/* TEXTO IZQUIERDO */
+#secreto .secret-copy {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+
+#secreto .secret-copy h2 {
+  font-size: clamp(20px, 2.1vw, 30px);
+  line-height: 1.1;
+}
+
+/* DIABLO Y BOTÓN EN EL CENTRO */
+#secreto .secret-interaction {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  min-width: 0;
+}
+
+#secreto .secret-interaction img.secret-devil {
+  position: static !important;
+  display: block;
+  flex: 0 0 auto;
+  width: 95px !important;
+  max-width: 95px !important;
+  height: auto !important;
+  margin: 0 !important;
+  transform: none !important;
+  opacity: 1;
+}
+
+#secreto .secret-interaction .secret-button {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  margin: 0;
+  color: #fff;
+}
+
+/* FRASE IRÓNICA A LA DERECHA */
+#secreto .cringe-note-secret {
+  grid-column: 3;
+  width: 100%;
+  margin: 0;
+  color: #525252;
+  font: 700 11px/1.8 var(--mono);
+  letter-spacing: .02em;
+  text-align: left;
+}
+
+/* MENSAJE SECRETO DEBAJO */
+#secreto .secret-message {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+/* TABLETS Y CELULARES */
+@media (max-width: 850px) {
+  #secreto.secret-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 45px 20px;
+  }
+
+  #secreto .secret-copy {
+    width: 100%;
+  }
+
+  #secreto .secret-interaction {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 18px;
+  }
+
+  #secreto .secret-interaction img.secret-devil {
+    width: 75px !important;
+    max-width: 75px !important;
+  }
+
+  #secreto .secret-interaction .secret-button {
+    padding: 13px 18px;
+    font-size: clamp(23px, 6vw, 30px);
+  }
+
+  #secreto .cringe-note-secret {
+    width: 100%;
+    font-size: 10px;
+  }
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+  #secreto.secret-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  #secreto .secret-copy {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  #secreto .secret-interaction {
+    width: 100%;
+    gap: 14px;
+  }
+
+  #secreto .secret-interaction img.secret-devil {
+    width: 75px !important;
+    max-width: 75px !important;
+  }
+
+  #secreto .cringe-note-secret {
+    width: 100%;
+    text-align: left;
+    margin-top: 4px;
+  }
+}
+
